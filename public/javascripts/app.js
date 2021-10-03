@@ -1,0 +1,1 @@
+console.log("Everything inside public goes to client side.");
