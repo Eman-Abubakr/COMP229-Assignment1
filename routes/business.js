@@ -38,7 +38,7 @@ router.post('/add', businessController.processAddPage );
 
 
  /* Delete. */
-router.get('/delete/:id',requireAuth, businessController.performDelete );
+router.get('/delete/:id', businessController.performDelete );
 
 
 module.exports = router;
