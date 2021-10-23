@@ -7,7 +7,7 @@ let passport = require ('passport');
 let userModel = require('../models/user');
 let User = userModel.User; //alias
 
-let DB = require('../config/db');
+//let DB = require('../config/db');
 
 exports.home = function(req, res, next)
 {
@@ -75,17 +75,17 @@ module.exports.processLoginPage = (req,res,next) =>{
             }
 
 
-            const payload = 
-            {
-                id: user._id,
-                displayName: user.displayName,
-                username: user.username,
-                email: user.email
-            }
+            // const payload = 
+            // {
+            //     id: user._id,
+            //     displayName: user.displayName,
+            //     username: user.username,
+            //     email: user.email
+            // }
 
-            const authToken = jwt.sign(payload, DB.Secret, {
-                expiresIn: 604800 // 1 week
-            });
+            // const authToken = jwt.sign(payload, DB.Secret, {
+            //     expiresIn: 604800 // 1 week
+            // });
 
             return res.redirect('/business-list');
         });
@@ -144,6 +144,8 @@ module.exports.displayRegisterPage = (req, res, next
             {
                 //if no error exists, then registration is successful
                 //redirect the user and authenticate them
+
+                
                 return passport.authenticate('local')(req, res, () =>{
                     res.redirect('/business-list')
                 });

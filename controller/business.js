@@ -43,7 +43,7 @@ exports.list = function(req, res, next) {
               res.render('business/add_edit',{
                   title: 'Edit Item',
                   item: itemToEdit  //object
-                  //,displayName: req.user ? req.user.displayName : ''
+                  ,displayName: req.user ? req.user.displayName : ''
                 } );    
             }
           })
@@ -92,7 +92,7 @@ module.exports.displayAddPage = (req, res, next) => {
   res.render('business/add_edit', {
       title: 'Add a new Contact',
       item: newItem
-     // ,displayName: req.user ? req.user.displayName : ''
+      ,displayName: req.user ? req.user.displayName : ''
   })          
 }
 
@@ -138,8 +138,8 @@ module.exports.performDelete = (req, res, next) => {
         else
         {
             // refresh the book list
-            res.redirect('/business/list'),
-            req.redirect('/business/add_edit');
+            res.redirect('/business/list');
+            //req.redirect('/business/add_edit');
         }
     });
 }
