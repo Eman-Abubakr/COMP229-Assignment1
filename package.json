@@ -1,5 +1,5 @@
 {
-  "name": "comp229-assignment2",
+  "name": "personal-portfolio",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -45,5 +45,12 @@
     "@types/mongoose": "^5.11.97",
     "@types/passport": "^1.0.7",
     "@types/passport-local": "^1.0.34"
-  }
+  },
+  "keywords": [
+    "personal",
+    "portfolio",
+    "-",
+    "eman",
+    "abubakr"
+  ]
 }
